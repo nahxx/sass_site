@@ -65,6 +65,17 @@ $(function() {
     }
   });
 
+  // 맨 위에서 스크롤 내려오면 header-box에 on 클래스 추가
+  let wHeight = $(window).height();
+  $(window).scroll(function() {
+    let thisScrTop = $(this).scrollTop();
+    if(thisScrTop != 0) {
+      $('.header-box').addClass('on');
+    } else if(thisScrTop == 0) {
+      $('.header-box').removeClass('on');
+    }
+  })
+
   // 메인배너 list 반응
-  
+
 });
