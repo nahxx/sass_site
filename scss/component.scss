@@ -1,0 +1,251 @@
+// component
+.box {
+  display: flex;
+  padding: 0 10%;
+  .items {
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px;
+    flex: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: $fontSizeMid;
+    .title {
+      position: absolute;
+      width: 100%;
+      top: 20%;
+      left: 20%;
+      font-size: 90px;
+      line-height: 100px;
+      letter-spacing: -4px;
+    }
+    p {
+      color: $fontColorGray;
+      font-size: $fontSizeNormal;
+      font-weight: 600;
+      line-height: $titleFontSizeNormal;
+    }
+    img {
+      width: 100%;
+    }
+    &.column {
+      flex: 100%;
+      text-align: center;
+      .title {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 50px;
+        line-height: 50px;
+      }
+      p {
+        margin: 20px 0;
+        span {
+          display: inline-block;
+          padding-top: 10px;
+          box-sizing: border-box;
+          line-height: $fontSizeBig;
+        }
+        strong {
+          color: $fontColorBasic;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  &.items_2 {
+    .items {
+      flex: 50%;
+    }
+  }
+  &#history {
+    padding: 0 12%;
+    .items {
+      position: relative;
+      width: 800px;
+      &:first-child {
+        flex: 45%;
+      }
+      &:last-child {
+        flex: 55%;
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 86px;
+        content: '';
+        display: block;
+        width: 2px;
+        height: 100%;
+        background: $borderColor1;
+      }
+      &:last-child:before {
+        display: none;
+      }
+      .title {
+        top: 30px;
+        left: 50px;
+        text-align: left;
+      }
+      ul {
+        position: relative;
+        display: block;
+        flex-flow: column;
+        height: 250px;
+        li {
+          display: block;
+          flex: 100%;
+          width: 100%;
+          height: 60px;
+          margin-bottom: 1%;
+          border-bottom: none;
+          border-radius: 10px;
+          background: $borderColorPrimary;
+          border: 1px solid $borderColor1;
+          box-sizing: border-box;
+          &.active {
+            background: $footerBg;
+            span {
+              color: #fff;
+              &:last-child {
+                color: $fontColorHover
+              }
+            }
+          }
+          .txt-box {
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            margin-left: 30px;
+            span {
+              color: $borderColor1;
+              display: inline-block;
+              line-height: 100%;
+              &:last-child {
+                color: $fontColorBasic;
+                margin-left: 20px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// community table
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 0;
+  & + .gbtn {
+    margin-top: 20px;
+    &.right {
+      float: right;
+    }
+  }
+  th {
+    height: 50px;
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: $fontSizeNormal;
+    color: $fontColorPrimary;
+    text-transform: uppercase;
+    border-top: 2px solid $fontColorPrimary;
+    border-bottom: 1px solid $borderColor1;
+    &:nth-child(1) {
+      width: 10%;
+    }
+    &:nth-child(2) {
+      width: 50%;
+    }
+    &:nth-child(3) {
+      width: 20%;
+    }
+    &:nth-child(4) {
+      width: 20%;
+    }
+  }
+  td {
+    height: 50px;
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: $fontSizeNormal;
+    color: $fontColorBasic;
+    border-bottom: 1px solid $borderColor1;
+    &:nth-child(1) {
+      width: 10%;
+    }
+    &:nth-child(2) {
+      width: 50%;
+    }
+    &:nth-child(3) {
+      width: 20%;
+    }
+    &:nth-child(4) {
+      width: 20%;
+    }
+  }
+}
+.tbl-header {
+  background: #fff;
+  margin: 0 10%;
+}
+.tbl-content {
+  margin-top: 0;
+  margin: 0 10%;
+}
+
+// accordion
+.accordion {
+  margin: 0 10%;
+  dl {
+    margin: 50px auto;
+    dt {
+      font-size: 18px;
+      text-indent: 3em;
+      color: white;
+      line-height: 35px;
+      height: 35px;
+      background: $gbtnColor;
+    }
+
+    dd {
+      height: 300px;
+      // background: #d4d0c8;
+      p {
+        text-indent: 1em;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+// kakao map
+.map-info-window {
+  width: 150px;
+  text-align: center;
+  padding: 6px 0;
+}
+
+// swiper {
+.swiper-button-next, .swiper-button-prev {
+  color: $fontColorBasic;
+}
+.swiper-button-next {
+  right: 5%;
+}
+.swiper-button-prev {
+  left: 5%;
+}
+.swiper-pagination-bullet {
+  background: $layoutBg;
+}
+.swiper-pagination-bullet-active {
+  background: $gbtnColor;
+}
