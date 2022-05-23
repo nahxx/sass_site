@@ -11,4 +11,9 @@
        <li>company, product, comunity(fna 제외) 콘텐츠 추가</li>
      </ol>
    </li>
+   <li>22/05/23
+     <ol>
+       <li>메인 페이지 콘텐츠 추가</li>
+     </ol>
+   </li>
  </ul>

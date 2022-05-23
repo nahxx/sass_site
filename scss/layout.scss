@@ -253,11 +253,11 @@ $mainMinHeight: calc(100vh - (#{$headerHeight} + #{$footerHeight} + 51px));
             }
             &:before {
               width: 100%;
-              background: $borderColor1;
+              background: $borderColorPrimary;
             }
             &:after {
               width: 60px;
-              background: $borderColorPrimary;
+              background: $borderColor1;
             }
           }
           // ul list 영역
