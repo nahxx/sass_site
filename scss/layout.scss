@@ -199,7 +199,7 @@ $mainMinHeight: calc(100vh - (#{$headerHeight} + #{$footerHeight} + 51px));
         justify-content: center;
         flex-wrap: wrap;
         .column {
-          flex: 25%;
+          flex: 15%;
           padding: 0 10px;
           margin-bottom: 30px;
           box-sizing: border-box;
@@ -213,71 +213,97 @@ $mainMinHeight: calc(100vh - (#{$headerHeight} + #{$footerHeight} + 51px));
               letter-spacing: 3px;
             }
           }
-          &.news {
-            p {
-              margin-bottom: 20px;
-            }
-            input {
-              &[type=text] {
-                border: 0;
-                padding: 6px 8px;
-                width: 65%;
-                box-sizing: border-box;
-                outline: none;
+          &.center {
+            flex: 70%;
+            overflow: hidden;
+            .con-wrap {
+              text-align: right;
+              color: #666;
+              p {
+                margin-top: 15px;
+                font-size: $fontSizeTiny;
               }
-              &[type=submit] {
-                border: 0;
-                padding: 6px 0;
-                width: 35%;
-                background: $gbtnColor;
-                color: white;
-                cursor: pointer;
-                outline: none;
+              ul {
+                display: flex;
+                justify-content: flex-end;
+                &:nth-child(2) {
+                  li {
+                    &:before {
+                      background: #fff;
+                    }
+                    a {
+                      span+span {
+                        &:before {
+                          background: #fff;
+                        }
+                      }
+                    }
+                  }
+                }
+                li {
+                  position: relative;
+                  &+li {
+                    margin-left: 20px;
+                  }
+                  &:before {
+                    position: absolute;
+                    top: 6px;
+                    left: -10.5px;
+                    content: '';
+                    width: 1px;
+                    height: 12px;
+                    background: #666;
+                  }
+                  &:first-child:before {
+                    display: none;
+                  }
+                  a {
+                    color: #666;
+                    font-size: 13px;
+                    &.white {
+                      color: #fff;
+                    }
+                    span {
+                      font-weight: 900;
+                      &+span {
+                        position: relative;
+                        font-weight: 400;
+                        margin-left: 15px;
+                        &:before {
+                          position: absolute;
+                          top: 4px;
+                          left: -9.5px;
+                          content: '';
+                          width: 1px;
+                          height: 12px;
+                          background: #666;
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
-          h4 {
+          .family-box {
             position: relative;
-            font-size: $fontSizeNormal;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            // 컬럼 타이틀 언더라인
-            &:before, &:after {
-              content: '';
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              height: 2px;
-            }
-            &:before {
-              width: 100%;
-              background: $borderColorPrimary;
-            }
+            display: block;
+            width: 180px;
+            height: 50px;
+            margin-left: 20px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            text-align: left;
             &:after {
-              width: 60px;
-              background: $borderColor1;
+              position: absolute;
+              top: 18px;
+              right: 10px;
+              content: '^';
+              color: #fff;
             }
-          }
-          // ul list 영역
-          ul {
-            li {
-              border-bottom: 1px solid $borderColorPrimary;
-              padding: 10px 0;
-              &:nth-child(1) {
-                padding-top: 0;
-              }
-              a {
-                color: $borderColorPrimary;
-              }
-            }
-          }
-          // 컬럼 텍스트
-          p {
-            line-height: 26px;
-            a {
-              color: $borderColorPrimary;
+            p {
+              line-height: 50px;
             }
           }
         }
