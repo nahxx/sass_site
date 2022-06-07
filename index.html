@@ -16,7 +16,9 @@
         <header id="header">
           <!-- 로고 -->
           <h1 id="top-logo">
-            <a href="../">CELLIVERY</a>
+            <a href="./">
+              <img src="./img/h-logo.png" alt="cellivery">
+            </a>
           </h1>
           <!-- 메인메뉴 -->
           <nav id="top-nav">
@@ -107,7 +109,9 @@
             <div class="row">
               <div class="column footer-logo">
                 <!-- footer logo -->
-                <h3>CELLIVERY</h3>
+                <h3>
+                  <img src="./img/f-logo.png" alt="cellivery">
+                </h3>
               </div>
               <div class="column center">
                 <div class="con-wrap">
@@ -164,21 +168,16 @@
             </div>
           </div>
         </div>
-        <!-- 푸터 하단 영역 -->
-        <!-- <div class="container">
-          <div class="copyright">
-            &copy;copyright <strong>MyPage</strong> .All Rights Reserved
-          </div>
-          <div class="credits">
-            Designed By <a href="mailto:aaa@naver.com">Myself</a>
-          </div>
-        </div> -->
       </footer>
     </div>
     <script>
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       centeredSlides: true,
+      autoplay: {
+        delay: 4000,
+        disableOnIntraction: false,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -186,6 +185,12 @@
       pagination: {
           el: ".swiper-pagination",
       },
+      on: {
+        slideChange: function() {
+          $('.swiper-wrapper + ul > li').removeClass('on');
+          $('.swiper-wrapper + ul > li').eq(this.realIndex).addClass('on');
+        }
+      }
     });
     </script>
   </body>

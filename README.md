@@ -19,6 +19,8 @@
    <li>22/06/07
      <ol>
        <li>푸터 변경</li>
+       <li>메인페이지 배너 변경시 리스트에 on 클래스 추가 이벤트 적용</li>
+       <li>gallery, career 페이지 수정 필요(career의 경우 서브메뉴 z-index수정 필요)</li>
      </ol>
    </li>
  </ul>
